@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Counters from "./Counters";
+import Gif from "./Gif";
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div>
         <h1 className="big">Jumpstarter Counters</h1>
         <Counters />
+        <Gif />
       </div>
     );
   }
