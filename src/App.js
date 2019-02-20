@@ -1,15 +1,13 @@
-import React, { Component } from "react";
-import "./App.css";
-import Counter from "./components/Counter/Counter";
+import React, { Component } from 'react'
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Counter />
-      </div>
-    );
+      <h1>
+        Counter Lab
+      </h1>
+    )
   }
 }
 
-export default App;
+export default App
