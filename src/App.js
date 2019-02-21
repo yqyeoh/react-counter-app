@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 
+import Counter from './components/Counter'
+
 export class App extends Component {
   render() {
     return (
-      <h1>
-        Counter Lab
-      </h1>
+      <React.Fragment>
+        <h1>Counter Lab</h1>
+        <Counter />
+      </React.Fragment>
+      
     )
   }
 }
