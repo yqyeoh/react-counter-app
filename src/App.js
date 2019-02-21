@@ -5,6 +5,7 @@ import Total from './components/Total/Total'
 import {counters} from './sampleData'
 
 export class App extends Component {
+  
   state={
     data:counters,
   }
@@ -42,15 +43,15 @@ export class App extends Component {
   }
 
   render() {
-
-    const numCounter = this.state.data.length
-    const totalCount = this.state.data.reduce((acc,element)=>{ return acc+element.value},0)
+    const {data} = this.state
+    const numCounter = data.length
+    const totalCount = data.reduce((acc,element)=>{ return acc+element.value},0)
     return (
       <React.Fragment>
         <h1>Counter Lab</h1>
         <Total numCounter={numCounter} totalCount={totalCount} />
         <Counters
-        data={this.state.data}
+        data={data}
           handleDecrement={this.handleDecrement}
           handleIncrement={this.handleIncrement}
           handleDelete={this.handleDelete}
