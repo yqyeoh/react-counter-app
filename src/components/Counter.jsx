@@ -5,13 +5,25 @@ export class Counter extends Component {
       id: 1, 
       value: 0
     }
+
+    handleIncrement=()=>{
+      const newValue = this.state.value + 1
+      this.setState({value:newValue});
+    }
+
+    handleDecrement=()=>{
+      const newValue = this.state.value - 1
+      this.setState({value:newValue})
+    }
   render() {
     return (
+      <React.Fragment>
         <h2>
-          <span className="badge badge-secondary">
-          {this.state.value}
-          </span>
+          <span className="badge badge-secondary">{this.state.value}</span>
         </h2>
+        <button onClick={this.handleIncrement} className="btn btn-primary m-2"> + </button>
+        <button onClick={this.handleDecrement} className="btn btn-danger m-2"> - </button>
+      </React.Fragment>
     )
   }
 }
