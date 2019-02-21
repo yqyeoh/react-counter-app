@@ -13,6 +13,7 @@ export class Counters extends Component {
   }  
   render() {
       const {data} = this.state
+      const isEmpty = data.length === 0
       /*const counterObject = data.map(counter => (
         <Counter key={counter.id} id={counter.id} value={counter.value} handleDelete={this.handleDelete}/>
       ))
@@ -20,9 +21,10 @@ export class Counters extends Component {
       const counterobj2 = [<Counter/>, <Counter/>]
 
       console.log(counterObject);*/
-      
+
     return (
       <div>
+          {isEmpty && <h2>No More Counters</h2>}
           {data.map(counter => (
             <Counter key={counter.id} id={counter.id} value={counter.value} handleDelete={this.handleDelete}/>
           ))}
