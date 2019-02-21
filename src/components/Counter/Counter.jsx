@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 export class Counter extends Component {
     state = { 
-      id: 1, 
-      value: 0
+      id: this.props.id,
+      value: this.props.value
     }
 
     handleIncrement=()=>{

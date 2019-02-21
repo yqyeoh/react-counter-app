@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import Counter from './components/Counter'
+import Counters from './components/Counters/Counters'
 
 export class App extends Component {
   render() {
     return (
       <React.Fragment>
         <h1>Counter Lab</h1>
-        <Counter />
+        <Counters />
       </React.Fragment>
       
     )
