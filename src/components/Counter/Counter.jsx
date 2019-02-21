@@ -28,6 +28,7 @@ export class Counter extends Component {
         </h2>
         <button onClick={this.handleIncrement} className="btn btn-primary m-2"> + </button>
         <button onClick={this.handleDecrement} className="btn btn-danger m-2"> - </button>
+        <button onClick={()=>this.props.handleDelete(this.state.id)} className="btn btn-secondary m-2"> Delete </button>
       </React.Fragment>
     )
   }
